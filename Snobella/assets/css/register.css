@@ -1,0 +1,27 @@
+body {
+  height: 100vh;
+}
+
+#register_area {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register {
+  width: 400px;
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+h2 {
+  text-align: center;
+}
+
+.submit {
+  width: 100%;
+  background-color: red;
+}
