@@ -42,7 +42,7 @@
     showToast("Giriş uğurludur!", "#2a9d8f");
 
     setTimeout(() => {
-      window.location.href = "lodingPage.html"; 
+      window.location.href = "index.html"; 
     }, 800);
   });
 })();
