@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link href="fonts.googleapis.com" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style2.css" />
+    <title>Storage</title>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <div class="left">
+        <img src="./assets/icons/phone.png" class="icon" alt="" />
+        +748 383 23 14
+      </div>
+      <div class="right">
+        <a href="#">Terms of Use</a>
+        <span>|</span>
+        <a href="#">FAQ</a>
+        <span>|</span>
+        <a href="#">Customer service</a>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="logo">Snobella</div>
+      <div class="search-box">
+        <input type="text" placeholder="Search all product" />
+        <img src="./assets/icons/search.png" class="search-icon" alt="" />
+      </div>
+      <div class="nav-icons">
+        <div class="user-box">
+          <a href="register.html" class="user-link">
+            <img src="./assets/icons/man.png" class="icon" alt="" />
+            <span class="username">Sign up</span>
+          </a>
+
+          <button class="logout-btn d-none">Logout</button>
+        </div>
+        <a href="#">
+          <img src="./assets/icons/heart.png" class="icon" alt="" />
+          Wishlist
+        </a>
+        <a href="#">
+          <img src="./assets/icons/bag.png" class="icon" alt="" />
+          Basket
+        </a>
+      </div>
+    </nav>
+    <div class="categories">
+      <a href="#">Evening bags</a>
+      <a href="#">Shoulder bag</a>
+      <a href="#">Backpack</a>
+      <a href="#">Handbag</a>
+      <a href="#">Postman bag</a>
+      <a href="#">Belt bags</a>
+    </div>
+
+    <section class="content-area">
+      <div class="sidebar">
+        <div class="filter-box">
+          <div class="filter-header">
+            <h3>Categories</h3>
+            <img src="./assets/icons/up.png" class="filter-icon" alt="" />
+          </div>
+          <div class="filter-list">
+            <a href="#">Backpacks</a>
+            <a href="#">Belt Bags</a>
+            <a href="#">Handbags</a>
+            <a href="#" class="active">Shoulder bags</a>
+            <a href="#">Evening bags</a>
+            <a href="#">Postman bag</a>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-header">
+            <h3>Material</h3>
+            <img src="./assets/icons/up.png" class="filter-icon" alt="" />
+          </div>
+          <div class="filter-list">
+            <label><input type="checkbox" /> Cloth</label>
+            <label><input type="checkbox" /> Cotton</label>
+            <label><input type="checkbox" /> Denim - Jeans</label>
+            <label class="checked"
+              ><input type="checkbox" checked /> Exotic Leathers</label
+            >
+            <label><input type="checkbox" /> Faux Fur</label>
+            <label class="checked"
+              ><input type="checkbox" checked /> Glitter</label
+            >
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-header">
+            <h3>Material</h3>
+            <img src="./assets/icons/up.png" class="filter-icon" alt="" />
+          </div>
+          <div class="price-range">
+            <input type="text" placeholder="$10" />
+            <span>-</span>
+            <input type="text" placeholder="$50" />
+            <button class="search-btn">
+              <img src="./assets/icons/search2.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-header">
+            <h3>Size</h3>
+            <img src="./assets/icons/up.png" class="filter-icon" alt="" />
+          </div>
+          <div class="size-options">
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-header">
+            <h3>Color</h3>
+            <img src="./assets/icons/up.png" class="filter-icon" alt="" />
+          </div>
+          <div class="color-list">
+            <div class="color-option selected" style="--c: #1f4638"></div>
+            <div class="color-option" style="--c: #259aff"></div>
+            <div class="color-option" style="--c: #3b2b2f"></div>
+            <div class="color-option" style="--c: #7a3e34"></div>
+            <div class="color-option" style="--c: #000"></div>
+            <div class="color-option" style="--c: #3a6d2d"></div>
+            <div class="color-option" style="--c: #1e9cff"></div>
+            <div class="color-option" style="--c: #ff7c00"></div>
+            <div class="color-option" style="--c: #d1b347"></div>
+            <div class="color-option" style="--c: #8f53ff"></div>
+            <div class="color-option" style="--c: #ff4c55"></div>
+            <div class="color-option" style="--c: #7b2c48"></div>
+            <div class="color-option" style="--c: #8a5a2e"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="product-header">
+          <span>320 results</span>
+          <div class="products-grid-header">
+            <span>Featured</span>
+            <img src="./assets/icons/up.png" alt="Sort dropdown" />
+          </div>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <span class="badge sale">30%</span>
+            <img
+              src="./assets/images/bigBag1.png"
+              class="prod-img"
+              alt="Shoulder Bag"
+            />
+            <img
+              src="./assets/icons/heart.png"
+              class="heart"
+              alt="Add to wishlist"
+            />
+            <div class="stars">★★★★★</div>
+            <p class="prod-title">
+              Shoulder Bag Leather Bag Leather undertakes laborious physical
+            </p>
+            <p class="price">$130.00 <span>From $340.00</span></p>
+            <button class="cart-btn">Add to cart</button>
+          </div>
+          <div class="product-card">
+            <span class="badge sale">30%</span>
+            <img
+              src="./assets/images/bigBag1.png"
+              class="prod-img"
+              alt="Shoulder Bag"
+            />
+            <img
+              src="./assets/icons/heart.png"
+              class="heart"
+              alt="Add to wishlist"
+            />
+            <div class="stars">★★★★★</div>
+            <p class="prod-title">
+              Shoulder Bag Leather Bag Leather undertakes laborious physical
+            </p>
+            <p class="price">$130.00 <span>From $340.00</span></p>
+            <button class="cart-btn">Add to cart</button>
+          </div>
+          <div class="product-card">
+            <span class="badge sale">30%</span>
+            <img
+              src="./assets/images/bigBag1.png"
+              class="prod-img"
+              alt="Shoulder Bag"
+            />
+            <img
+              src="./assets/icons/heart.png"
+              class="heart"
+              alt="Add to wishlist"
+            />
+            <div class="stars">★★★★★</div>
+            <p class="prod-title">
+              Shoulder Bag Leather Bag Leather undertakes laborious physical
+            </p>
+            <p class="price">$130.00 <span>From $340.00</span></p>
+            <button class="cart-btn">Add to cart</button>
+          </div>
+          <div class="product-card">
+            <span class="badge sale">30%</span>
+            <img
+              src="./assets/images/bigBag3.png"
+              class="prod-img"
+              alt="Shoulder Bag"
+            />
+            <img
+              src="./assets/icons/heart.png"
+              class="heart"
+              alt="Add to wishlist"
+            />
+            <div class="stars">★★★★★</div>
+            <p class="prod-title">
+              Shoulder Bag Leather Bag Leather undertakes laborious physical
+            </p>
+            <p class="price">$130.00 <span>From $340.00</span></p>
+            <button class="cart-btn">Add to cart</button>
+          </div>
+          <div class="product-card">
+            <span class="badge sale">30%</span>
+            <img
+              src="./assets/images/bigBag1.png"
+              class="prod-img"
+              alt="Shoulder Bag"
+            />
+            <img
+              src="./assets/icons/heart.png"
+              class="heart"
+              alt="Add to wishlist"
+            />
+            <div class="stars">★★★★★</div>
+            <p class="prod-title">
+              Shoulder Bag Leather Bag Leather undertakes laborious physical
+            </p>
+            <p class="price">$130.00 <span>From $340.00</span></p>
+            <button class="cart-btn">Add to cart</button>
+          </div>
+          <div class="product-card">
+            <span class="badge sale">30%</span>
+            <img
+              src="./assets/images/bigBag1.png"
+              class="prod-img"
+              alt="Shoulder Bag"
+            />
+            <img
+              src="./assets/icons/heart.png"
+              class="heart"
+              alt="Add to wishlist"
+            />
+            <div class="stars">★★★★★</div>
+            <p class="prod-title">
+              Shoulder Bag Leather Bag Leather undertakes laborious physical
+            </p>
+            <p class="price">$130.00 <span>From $340.00</span></p>
+            <button class="cart-btn">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-search">
+        <h2 class="footer-logo">Snobella</h2>
+        <div class="footer-searchbox">
+          <input type="text" placeholder="Search all product" />
+          <img src="./assets/icons/search.png" alt="" />
+        </div>
+      </div>
+      <hr class="footer-line" />
+      <div class="footer-content">
+        <div class="footer-left">
+          <p class="footer-text">
+            The wise man therefore always holds selection<br />
+            The wise man therefore always rejects pleasures<br />
+            to secure other greater
+          </p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <img src="./assets/icons/group.png" alt="" />
+              <span>Snobella@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <img src="./assets/icons/phone2.png" alt="" />
+              <span>+748 383 23 14</span>
+            </div>
+          </div>
+          <button class="send-btn">
+            <img src="./assets/icons/send.png" alt="" />
+            Send message
+          </button>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#">Shoulder Bag</a>
+          <a href="#">Backpack</a>
+          <a href="#">Tote Bag</a>
+          <a href="#">Hand Bag</a>
+          <a href="#">Evening bags</a>
+          <a href="#">Purse</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About us</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Customer service</a>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Delivery</a>
+          <a href="#">Cancellation of the order</a>
+          <a href="#">Don't go back</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2020. All rights reserved.</p>
+        <div class="footer-social">
+          <img src="./assets/icons/insta.png" alt="" />
+          <img src="./assets/icons/fb.png" alt="" />
+          <img src="./assets/icons/wp.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

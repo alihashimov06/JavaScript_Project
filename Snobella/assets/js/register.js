@@ -1,88 +1,82 @@
+document.addEventListener("DOMContentLoaded", () => {
+  let users = JSON.parse(localStorage.getItem("users")) || [];
 
-(function () {
-  const form = document.querySelector("form");
+  let form = document.querySelector("form");
 
-  function showToast(message, bg = "#d00000") {
-    if (window.Toastify) {
-      Toastify({
-        text: message,
-        duration: 2000,
-        close: true,
-        style: {
-          background: bg,
-        },
-      }).showToast();
-    } else {
-      alert(message);
-    }
-  }
+  let name = document.querySelector("#name");
+  let userName = document.querySelector("#username");
+  let email = document.querySelector("#email");
+  let password = document.querySelector("#password");
 
-  if (!form) return;
+  form.addEventListener("submit", Register);
 
-  form.addEventListener("submit", function (e) {
+  function Register(e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    const nameRegex = /^[A-Za-z]{3,}$/;
-    const usernameRegex = /^[A-Za-z]{3,}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-
-    if (!name || !username || !email || !password) {
-      return showToast("Bütün xanaları doldurun!");
+    if (password.value.length < 6) {
+      sweetToast("Password must be at least 6 characters!", "error");
+      return;
     }
 
-    if (!nameRegex.test(name)) {
-      return showToast("Ad minimum 3 hərf olmalıdır və rəqəm simvol olmaz!");
-    }
-
-    if (!usernameRegex.test(username)) {
-      return showToast(
-        "Username minimum 3 hərf olmalıdır və rəqəm simvol olmaz!"
-      );
-    }
-
-    if (!emailRegex.test(email)) {
-      return showToast("Email düzgün formatda deyil!");
-    }
-
-    if (!passRegex.test(password)) {
-      return showToast(
-        "Şifrə min 8 simvol, 1 böyük, 1 kiçik hərf və 1 rəqəm olmalıdır!"
-      );
-    }
-
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const duplicateUser = users.find(
-      (u) =>
-        u.username.toLowerCase() === username.toLowerCase() ||
-        u.email.toLowerCase() === email.toLowerCase()
+    let existUser = users.some(
+      (user) => user.userName === userName.value || user.email === email.value
     );
 
-    if (duplicateUser) {
-      return showToast("Username və ya Email artıq istifadə olunub!");
+    if (existUser) {
+      sweetToast("This username or email already exists!", "error");
+      return;
     }
 
-    const newUser = {
-      id: Date.now(),
-      name,
-      username,
-      email,
-      password,
+    let newUser = {
+      name: name.value,
+      userName: userName.value,
+      email: email.value,
+      password: password.value,
+      isLogined: false,
     };
 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-
-    showToast("Qeydiyyat uğurludur!", "#2a9d8f");
+    sweetToast("Registration successful!", "success");
 
     setTimeout(() => {
       window.location.href = "login.html";
-    }, 800);
-  });
-})();
+    }, 1250);
+  }
+});
+
+function sweetToast(message, type = "success") {
+  let colors = {
+    success: "#ffffffff",
+    error: "#ff0000ff",
+    info: "#e0f000ff",
+  };
+
+  Toastify({
+    text: message,
+    duration: 1250,
+    gravity: "top",
+    position: "right",
+    close: true,
+    stopOnFocus: true,
+    escapeMarkup: false,
+    style: {
+      background: "#ffffff",
+      color: "#333",
+      borderRadius: "14px",
+      padding: "14px 22px",
+      boxShadow: "0 8px 25px rgba(0, 0, 0, 0.18)",
+      borderLeft: `6px solid ${colors[type]}`,
+      fontSize: "15px",
+      fontWeight: "500",
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
+      animation: "slideIn .4s ease",
+    },
+    offset: {
+      x: 20,
+      y: 20,
+    },
+  }).showToast();
+}
