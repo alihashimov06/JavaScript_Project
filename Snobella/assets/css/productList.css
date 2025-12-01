@@ -1,5 +1,3 @@
-
-
 :root {
   --site-max-width: 1003px;
   --gap: 24px;
@@ -109,7 +107,6 @@
   cursor: pointer;
 }
 
-/* Responsive breakpoints */
 @media (max-width: 1200px) {
   .product-list {
     grid-template-columns: repeat(3, 1fr);
@@ -154,7 +151,6 @@
   font-family: "Poppins", sans-serif;
   padding: 48px 16px;
 }
-
 
 .badge {
   position: absolute;
